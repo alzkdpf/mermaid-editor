@@ -7,4 +7,5 @@ yarn-error.log
 /dist/
 /docs/
 yarn.lock
-
+.tar
+.tgz
