@@ -1,5 +1,10 @@
+.svn/
 node_modules/
 coverage/
 .cache/
 build/
 yarn-error.log
+/dist/
+/docs/
+yarn.lock
+
