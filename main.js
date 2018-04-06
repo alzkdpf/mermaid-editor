@@ -1,7 +1,7 @@
 const electron = require('electron')
 
 // Module to control application life.
-const {app, Menu, session} = electron
+const {app, Menu, session, shell} = electron
 // const Menu = electron.Menu
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
@@ -119,14 +119,17 @@ function createWindow () {
   app.dock.setMenu(dockMenu)
 
   // Create the browser window.
+
+  console.log(__dirname+'/icon/icon.ico')
   let mainWindow = new BrowserWindow(
     {
       backgroundColor: '#2e2c29',
       width: 1280,
       height: 720,
-      webPreferences: {
-        partition: `xxx:${uuid()}`
-      }
+      icon:__dirname+'/icon/icon.ico'
+      // webPreferences: {
+      //   partition: `xxx:${uuid()}`
+      // }
     })
 
 //   const ses = mainWindow.webContents.session
@@ -144,6 +147,11 @@ function createWindow () {
   });
 
   mainWindow.loadURL(startUrl);
+
+  mainWindow.webContents.on('new-window', (event, url) => {
+    event.preventDefault();
+    electron.shell.openExternal(url);
+  });
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

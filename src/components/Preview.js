@@ -24,8 +24,8 @@ class Preview extends React.Component {
       </Card>
       <Card title='Actions'>
         <div className='links'>
-          <Link to={url.replace('/edit/', '/view/')}>Link to View</Link>
-          <Divider type='vertical' />
+          {/* <Link to={url.replace('/edit/', '/view/')} target="_blank">Link to View</Link> */}
+          {/* <Divider type='vertical' /> */}
           <a href='' download='' onClick={this.onDownloadSVG}>Download SVG</a>
         </div>
       </Card>
