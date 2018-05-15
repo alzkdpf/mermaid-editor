@@ -1,5 +1,4 @@
 const electron = require('electron')
-
 // Module to control application life.
 const {app, Menu, session, shell} = electron
 // const Menu = electron.Menu
@@ -15,7 +14,6 @@ if (process.env.ELECTRON_START_URL) {
     require('electron-reload')(__dirname)
 }
 
-  
 const template = [
   {
     label: 'Edit',
@@ -127,19 +125,8 @@ function createWindow () {
       width: 1280,
       height: 720,
       icon:__dirname+'/icon/icon.ico'
-      // webPreferences: {
-      //   partition: `xxx:${uuid()}`
-      // }
     })
 
-//   const ses = mainWindow.webContents.session
-//   ses.clearCache(function(response){
-//     // console.log(response)
-//   })
-//   ses.flushStorageData()
-//   // console.log(ses.getUserAgent)
-
-  // and load the index.html of the app.
   const startUrl = process.env.ELECTRON_START_URL || url.format({
     pathname: path.join(__dirname, './docs/index.html'),
     protocol: 'file:',

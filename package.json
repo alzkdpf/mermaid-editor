@@ -1,6 +1,6 @@
 {
-  "name": "mermaid-live-editor-app",
-  "version": "0.1.1",
+  "name": "Mermaid Editor",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "main.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "dev-electron": "parcel ./index.html -d docs/",
     "start-dev": "ELECTRON_START_URL=http://localhost:1234 electron .",
     "start-local": "ELECTRON_START_URL=$(cwd: pwd + 'docs/index.html') electron .",
-    
+
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
