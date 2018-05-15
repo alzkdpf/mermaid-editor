@@ -1,5 +1,5 @@
 {
-  "name": "Mermaid Editor",
+  "name": "mermaid-editor",
   "version": "0.0.1",
   "license": "MIT",
   "main": "main.js",
@@ -8,13 +8,10 @@
     "test": "standard && jest --coverage",
     "test:watch": "yarn test --watch",
     "dev": "parcel ./index.html -d build",
-    "release": "parcel build ./index.html -d docs --public-url ./",
-
     "build": "parcel build ./index.html -d docs --public-url ./",
     "dev-electron": "parcel ./index.html -d docs/",
     "start-dev": "ELECTRON_START_URL=http://localhost:1234 electron .",
     "start-local": "ELECTRON_START_URL=$(cwd: pwd + 'docs/index.html') electron .",
-
     "start": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
@@ -29,7 +26,8 @@
       "main.js",
       "docs/*",
       "build/*.icns"
-    ]
+    ],
+    "productName" : "Mermaid Editor"
   },
   "keywords": [
     "parcel",

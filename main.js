@@ -124,7 +124,8 @@ function createWindow () {
       backgroundColor: '#2e2c29',
       width: 1280,
       height: 720,
-      icon:__dirname+'/icon/icon.ico'
+      icon:__dirname+'/icon/icon.ico',
+      title:"Mermaid Editor"
     })
 
   const startUrl = process.env.ELECTRON_START_URL || url.format({
